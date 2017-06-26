@@ -1,0 +1,34 @@
+{
+  "name": "braingames-104-nd",
+  "version": "0.1.0",
+  "description": "project level 1 on hexlet - brain-game",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurgeld/project-lvl1-s104.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "nurgeldy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurgeld/project-lvl1-s104/issues"
+  },
+  "homepage": "https://github.com/nurgeld/project-lvl1-s104#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
+}
