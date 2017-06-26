@@ -1,6 +1,6 @@
 {
   "name": "braingames-104-nd",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "project level 1 on hexlet - brain-game",
   "main": "index.js",
   "bin": {
@@ -25,6 +25,9 @@
     "url": "https://github.com/nurgeld/project-lvl1-s104/issues"
   },
   "homepage": "https://github.com/nurgeld/project-lvl1-s104#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
