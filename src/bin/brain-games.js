@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import askPlayerName from '..';
+import { askPlayerName } from '..';
 
 askPlayerName();
