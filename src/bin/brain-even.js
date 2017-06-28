@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { welcomeLine, ruleForEven, questionEven } from '..';
+import play from '../games/even';
 
-welcomeLine();
-ruleForEven();
-questionEven();
+play();

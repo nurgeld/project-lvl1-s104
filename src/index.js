@@ -1,24 +1,22 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
-export const welcomeLine = () => console.log('Welcome to the Brain Games!');
-
-export const askPlayerName = () => {
-  const playerName = readlineSync.question('\nMay I have your name?: ');
-  console.log(`Hello, ${playerName}!\n`);
-  return playerName;
-};
+export const setRandNum = max => Math.floor(max * Math.random());
 
 const steps = 3;
-const setRandNum = max => Math.floor(max * Math.random());
-const isEven = num => num % 2 === 0;
 
-export const ruleForEven = () => console.log('Answer "yes" if number even otherwise answer "no".');
+export default (game) => {
+  console.log('Welcome to the Brain Games!');
+  const ruleForGame = car(game);
+  console.log(ruleForGame);
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!\n`);
 
-export const questionEven = () => {
-  const playerName = askPlayerName();
   for (let i = 1; i <= steps; i += 1) {
-    const question = setRandNum(100);
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
+    const puzzle = cdr(game);
+    const questionAndAnswer = puzzle();
+    const question = car(questionAndAnswer);
+    const correctAnswer = `${cdr(questionAndAnswer)}`;
     const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
     if (answer === correctAnswer) {
       console.log('Correct!');
@@ -29,5 +27,3 @@ export const questionEven = () => {
   }
   console.log(`Congratulations, ${playerName}!`);
 };
-
-// export questionEven;
