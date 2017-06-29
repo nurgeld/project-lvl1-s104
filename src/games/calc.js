@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import gameLogic, { setRandNum } from '..';
 
-const ruleForCalc = 'What is the result of the expression?\n';
+const ruleForCalc = 'What is the result of the expression?';
 
 export const calc = () => {
   const operators = '+-*';

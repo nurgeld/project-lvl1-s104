@@ -9,9 +9,10 @@ export default (game) => {
   console.log('Welcome to the Brain Games!');
   const ruleForGame = car(game);
   console.log(ruleForGame);
+  console.log('');
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!\n`);
-
+  console.log(`Hello, ${playerName}!`);
+  console.log('');
   for (let i = 1; i <= steps; i += 1) {
     const puzzle = cdr(game);
     const questionAndAnswer = puzzle();
