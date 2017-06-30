@@ -1,13 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import gameLogic, { setRandNum } from '..';
+import gameLogic from '..';
+import getRandNum from '../randomizer';
 
 const ruleForCalc = 'What is the result of the expression?';
 
 export const calc = () => {
   const operators = '+-*';
-  const firstNum = setRandNum(100);
-  const secondNum = setRandNum(100);
-  const operator = operators[setRandNum(operators.length)];
+  const firstNum = getRandNum(100);
+  const secondNum = getRandNum(100);
+  const operator = operators[getRandNum(operators.length)];
   const questionStr = `${firstNum} ${operator} ${secondNum}`;
   switch (operator) {
     case '+': {

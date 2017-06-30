@@ -1,12 +1,13 @@
 import { cons } from 'hexlet-pairs';
-import gameLogic, { setRandNum } from '..';
+import gameLogic from '..';
+import getRandNum from '../randomizer';
 
 const isEven = num => num % 2 === 0;
 
-const ruleForEven = 'Answer "yes" if number even otherwise answer "no"\n';
+const ruleForEven = 'Answer "yes" if number even otherwise answer "no"';
 
 export const even = () => {
-  const question = setRandNum(100);
+  const question = getRandNum(100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };

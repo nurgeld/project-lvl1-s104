@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-export const setRandNum = max => Math.floor(max * Math.random());
+// export const setRandNum = max => Math.floor(max * Math.random());
 
 const steps = 3;
 
