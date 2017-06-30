@@ -10,13 +10,9 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-// const firstNum = setRandNum(100);
-// const secondNum = setRandNum(100);
-// const question = `${firstNum} ${secondNum}`;
-
-const gcdGame = () => {
-  const firstNum = setRandNum(100);
-  const secondNum = setRandNum(100);
+export const gcdGame = () => {
+  const firstNum = setRandNum(100) + 1;
+  const secondNum = setRandNum(101) + 1;
   const question = `${firstNum} ${secondNum}`;
   const answer = gcd(firstNum, secondNum);
   return cons(question, answer);
