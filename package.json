@@ -1,6 +1,6 @@
 {
   "name": "braingames-104-nd",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "project level 1 on hexlet - brain-game",
   "main": "index.js",
   "bin": {
