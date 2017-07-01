@@ -6,21 +6,26 @@ const ruleForBalance = 'Balance the given number.';
 
 const balance = (number) => {
   const strNum = String(number);
-  let array = [];
-  for (let i = 0; i < strNum.length; i += 1) {
-    array.push(strNum[i]);
+  let result = '';
+  for (let i = 0; i < strNum.length - 1; i += 1) {
+    // let result = '';
+    if (Number(strNum[i]) - Number(strNum[i + 1]) > 1) {
+      result += Number(strNum[i]) - 1;
+      result += Number(strNum[i + 1]) + 1;
+      result += strNum.substring(i + 2, strNum.length);
+    }
+    if (Number(strNum[i]) - Number(strNum[i + 1]) < -1) {
+      result += Number(strNum[i]) + 1;
+      result += Number(strNum[i + 1]) - 1;
+      result += strNum.substring(i + 2, strNum.length);
+    }
+    if (Math.abs(Number(strNum[i]) - Number(strNum[i + 1])) <= 1) {
+      result += strNum;
+    }
   }
-  const sortedArray = array.sort();
-  let max = sortedArray[strNum.length - 1];
-  let min = sortedArray[0];
-  if (max - min <= 1) {
-    return Number(); // здесь надо как-то обратно запаковать массив в строку
-  }
-  max -= 1;
-  min += 1;
-  return ; // похоже нужна рекурсия, чтобы снова запустить сортировку и проверку на max - min <= 1
-
-  // const isBalance = num => max - min <= 1;
+  // надо как-то выйти из рекурсии, с результатом, имеющим сбалансированное
+  // число (на этом этапе с еще не упорядоченными цифрами)
+  return balance(Number(result));
 };
 
 export const balanceGame = () => {
