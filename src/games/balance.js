@@ -15,14 +15,14 @@ const balance = (number) => {
     if (Number(strNum[acc]) - Number(strNum[acc + 1]) > 1) {
       result += Number(strNum[acc]) - 1;
       result += Number(strNum[acc + 1]) + 1;
-      result += strNum.substring(acc + 2, strNum.length);
+      result += strNum.substring(acc + 2);
     }
     if (Number(strNum[acc]) - Number(strNum[acc + 1]) < -1) {
       result += Number(strNum[acc]) + 1;
       result += Number(strNum[acc + 1]) - 1;
-      result += strNum.substring(acc + 2, strNum.length);
+      result += strNum.substring(acc + 2);
     }
-    result += strNum;
+    result = strNum;
     return iter(result, acc + 1);
   };
   return iter(number, 0);
