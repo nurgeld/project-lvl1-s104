@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-// export const setRandNum = max => Math.floor(max * Math.random());
-
 const steps = 3;
 
 export default (game) => {
@@ -11,8 +9,8 @@ export default (game) => {
   console.log(ruleForGame);
   console.log('');
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!`);
-  console.log('');
+  console.log(`Hello, ${playerName}!\n`);
+  // console.log('');
   for (let i = 1; i <= steps; i += 1) {
     const puzzle = cdr(game);
     const questionAndAnswer = puzzle();
