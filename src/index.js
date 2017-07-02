@@ -6,8 +6,8 @@ const steps = 3;
 export default (game) => {
   console.log('Welcome to the Brain Games!');
   const ruleForGame = car(game);
-  console.log(ruleForGame);
-  console.log('');
+  console.log(ruleForGame, '\n');
+  // console.log('');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
   // console.log('');
